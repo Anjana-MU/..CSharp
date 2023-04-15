@@ -1,24 +1,3 @@
-
-
-Signed and Unsigned Integral types:
-![image](https://user-images.githubusercontent.com/77484700/232238800-ecd3e5e7-49f4-468a-9f86-0c179b96c162.png)
-
-Floating point types:
-![image](https://user-images.githubusercontent.com/77484700/232238839-9e37fadf-b18b-4544-bd0b-118a91bb13e1.png)
-
-	
-Decimal types:
-![image](https://user-images.githubusercontent.com/77484700/232238832-66f0105d-1dae-4ffa-9868-70301b6af052.png)
-
-	
-Character types:
-![image](https://user-images.githubusercontent.com/77484700/232238826-eac257a5-f80d-4cec-b407-7f12f8b51cf1.png)
-
-
-Boolean types:
-
-![image](https://user-images.githubusercontent.com/77484700/232238819-26944ac1-8881-415c-87ab-93e3206a24b1.png)
-
 **Reference and Value types:**
 
 Value type:
