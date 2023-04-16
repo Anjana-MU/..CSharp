@@ -29,3 +29,5 @@ Multi-dimensional array:
 	
 Jagged array
 - A jagged array is an array whose elements are arrays, possibly of different sizes. A jagged array is sometimes called an "array of arrays."
+
+![image](https://user-images.githubusercontent.com/77484700/232307497-57aebfde-ccb4-4179-a98b-c414711cee2f.png)
