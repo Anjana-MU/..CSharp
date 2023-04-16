@@ -15,7 +15,6 @@
 
 - A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to null.
 
-![image](https://user-images.githubusercontent.com/77484700/232307417-d1814c19-0b3a-47d3-a870-2debe8a1d803.png)
 
 Single dimension array:
 - Can be created by specifying the type of array(value or reference) and size of array
