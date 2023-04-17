@@ -1,0 +1,4 @@
+Arrays vs Lists:
+	- Lists can be resized easily, resizing array is expensive
+	- Size needs to be declared for arrays during creation
+	- Use arrays when you want to deal with multi-dimension data like storing co-ordinate values for different sides of triangles
