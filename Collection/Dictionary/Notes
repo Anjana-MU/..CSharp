@@ -1,0 +1,11 @@
+Dictionary<Tkey, Tvalue>
+	- Dictionary is a collection of key-value pair
+	- The keys in dictionary need to be unique
+	- You can use ContainsKey to check if key exists
+	- KeyValuePair<Tkey, Tvalue> can be used to get key-values
+	- Dictionary.ValueCollection(Tkey,Tvalue) can be used to get values
+	
+To shallow copy a dictionary:
+	- You can use the constructor of Dictionary<Tkey,Tvalue>
+	Dictionary<Tkey, TValue> newDict= newDictionary<Tkey,Tvalue>(oldDict);
+You can use LINQ's .ToDictionary()
