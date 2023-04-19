@@ -13,7 +13,7 @@
 	string[] cars = {"Volvo","BMW","Ford","Mazda"};
 	
 **- An array stores a fixed-size sequential collection of elements of the same type.**
-- **Array is stored in contagious manner**
+- **Array is stored in contiguous manner**
 
 
 - A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to null.
