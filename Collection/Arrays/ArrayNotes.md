@@ -1,6 +1,7 @@
 - Arrays are used to store multiple values in a single variable
+
 -  Create an array of four elements, and add values later
-- string[] cars =new string[4];
+ 	string[] cars =new string[4];
 	
 -  Create an array of four elements and add values right away
 	 string[] cars =new string[4 ] {"Volvo","BMW","Ford","Mazda"};
