@@ -23,5 +23,6 @@ namespace Learning_2023
                 Console.Write(i + " ");
             }
         }
+         //Output: 100 110
     }
 }
