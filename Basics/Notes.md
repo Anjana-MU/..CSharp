@@ -50,4 +50,6 @@ Struct
 - Default modifier for struct is internal , for class it is public
 - Use struct when you want to store data
 - Struct cannot have parameter less constructor
+- Struct and class are almost same. Struct still exists as C-Language only has struct and no class.
+
 
