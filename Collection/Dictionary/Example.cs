@@ -61,6 +61,18 @@ namespace Learning_2023
             Console.WriteLine("StudentDetails{0}", string.Join(',',studentDetails));           
 
         }
+        
+           /*Output
+           An element with key 001 already exists
+            The value of 001 is Student1
+            Student002
+            Key does not exist
+            Key is 1 for student Student1
+            Key is 2 for student Student002
+            Key is 3 for student Student3
+            Key is 5 for student Student5
+            StudentDetails[1, Student1],[3, Student3],[5, Student5]
+         */
 
         public static void copyDict()
         {
@@ -70,7 +82,7 @@ namespace Learning_2023
             dict.Add("Grey", "#808080");
             dict.Add("Silver", "#C0C0C0");
             dict.Add("Black", "#000000");
-
+             //Creates a shallow copy(copy constructor)
             var dictCopy = new Dictionary<string, string>(dict);
 
             Console.WriteLine("New copied dict{0}",String.Join(", ", dictCopy));
@@ -80,4 +92,10 @@ namespace Learning_2023
             Console.WriteLine("Changed new dict {0}", string.Join(",", dictCopy));
         }
     }
+    
+    /* Output
+    New copied dict[White, #FFFFFF], [Grey, #808080], [Silver, #C0C0C0], [Black, #000000]
+    Changed original dict [White, #FFFFFF],[Grey, #808080],[Silver, #C0C0C0],[Black, #000000]
+    Changed new dict [Grey, #808080],[Silver, #C0C0C0],[Black, #000000]
+*/
 }
