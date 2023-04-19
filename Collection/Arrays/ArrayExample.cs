@@ -18,6 +18,7 @@ namespace Learning_2023
 
             Console.WriteLine("Today is {0}day", weekDays2[0]);
         }
+        //Output: Today is Sunday
 
         public static void twoDimArray()
         {
@@ -25,6 +26,7 @@ namespace Learning_2023
             Console.WriteLine("The second elemnt of second row is {0}", twodim[1, 1]);
 
         }
+        //Output: The second elemnt of second row is 2
 
         public static void threeDimArray()
         {
@@ -34,6 +36,7 @@ namespace Learning_2023
 
             Console.WriteLine("The second element of second row is {0}", threedim[0, 1, 1]);
         }
+        //Output: The second element of second row is 4
 
         public static void ArraySortExample()
         {
@@ -43,5 +46,6 @@ namespace Learning_2023
 
             Console.WriteLine(string.Join(", ", names)); //output a, A, B, Z
         }
+        //Output: a, A, B, Z
     }
 }
