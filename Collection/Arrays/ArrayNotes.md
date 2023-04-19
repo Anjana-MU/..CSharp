@@ -12,7 +12,9 @@
 -  Create an array of four elements, omitting the new keyword, and without specifying the size
 	string[] cars = {"Volvo","BMW","Ford","Mazda"};
 	
-- An array stores a fixed-size sequential collection of elements of the same type.
+**- An array stores a fixed-size sequential collection of elements of the same type.**
+- **Array is stored in contagious manner**
+
 
 - A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to null.
 
@@ -32,4 +34,23 @@ Jagged array
 - A jagged array is an array whose elements are arrays, possibly of different sizes. A jagged array is sometimes called an "array of arrays."
 - 
 ![image](https://user-images.githubusercontent.com/77484700/232307606-85a32a47-ceb6-4890-86c5-ad8293a7f509.png)
+
+
+Shallow copy of array:
+- Array.clone() creates a shallow copy
+- Using a assignment operator(=) you can do a shallow copy as well
+
+Deep copy:
+- One way of deep copy is to loop through all the elements of the original array and assign it to new array
+	For(i=0; i<new_array.length;i++)
+	{
+	New_array[i] = original_array[i];
+	}
+- Array.Copy(original_array, new_array_2, original_array.Length);
+- When you are deep copying an array which has reference values, those values need to be deep copied as well
+
+Built-in methods of arrays are
+- Rank
+- Sort
+- Reverse
 
