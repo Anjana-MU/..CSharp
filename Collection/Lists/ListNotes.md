@@ -4,7 +4,7 @@ Lists
 - Initially, even if list size is not mentioned it creates a list of some size and when that size limit exceeds the size is doubled
 - Lists are automatically expandable arrays
 
-- List*<T>* : *<T>* specifies the datatype
+- List<T> : <T> specifies the datatype
 - Lists can be resized
 
 Built-In methods of lists are:
