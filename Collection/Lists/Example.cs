@@ -38,6 +38,15 @@ namespace Learning_2023
             Console.WriteLine("Standard name list after modification {0}", string.Join(',', studentMarks));
             Console.WriteLine("Copied  list after modification {0}", string.Join(',', copyList_marks));
         }
+        
+        /* Output
+        Copied list before modification Rocky,Leo,Trigga
+        Standard name list after modification Shiro,Leo,Trigga
+        Copied list after modification Rocky,Leo,Trigga
+        Copied list before modification 10,20,30
+        Standard name list after modification 100,20,30
+        Copied  list after modification 10,20,30
+         */
 
         public static void ShallowCopyExample1()
         {
