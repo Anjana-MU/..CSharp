@@ -1,0 +1,13 @@
+
+Ref keyword:
+	- The ref keyword indicates that a variable is a reference, or an alias for another object.
+	- To use a ref parameter, both the method definition and the calling method must explicitly use the ref keyword
+	- An argument that is passed to a ref or in parameter must be initialized before it's passed. This requirement differs from out parameters, whose arguments don't have to be explicitly initialized before they're passed.
+
+Out parameter:
+	- Out parameter should be declared before passing them, and initialized inside the called method
+	- the method definition and the calling method must explicitly use the out keyword.
+
+Method overloading
+	- Method overloading is also called compile-time polymorphism.
+Method with same name but different signatures
