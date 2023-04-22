@@ -1,0 +1,16 @@
+Classes and Objects
+	- Class is a collection of related variables and methods
+	- A type that is defined as a class is a reference type.
+	- Class helps you conceal data
+	- Encapsulation is achieved by using Access Specifiers (Public, Private, Protected, Internal, Sealed).
+	- Encapsulation is the packing of "data" and "functions operating on that data" into a 
+	  single component and restricting the access to outside code.
+	- Partial class, splitting the class into segments over two or more source files within the namespace.
+	
+	The below points are for methods:
+	Public: Accessible anywhere
+	Private: Accessible within the scope of the curly braces
+	Internal: The code is only accessible within its own assembly, but not from another assembly
+	Protected:
+		- Mostly used in inheritance
+The code is accessible for the current class and the class that inherits it.
