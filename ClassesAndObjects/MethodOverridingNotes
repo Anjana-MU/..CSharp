@@ -1,0 +1,7 @@
+Method Overriding
+- Run-time polymorphism
+- You cannot override a static method
+- The process of re-implementing the superclass non-static, non-private, and non-sealed method in the subclass with the same signature is called Method Overriding
+- If the Super Class or Parent Class method logic is not fulfilling the Sub Class or Child Class business requirements, then the Sub Class or Child Class needs to override the superclass method
+- If you want to override the Parent class method in its Child classes, first the method in the parent class must be declared as virtual by using the virtual keyword, then only the child classes get permission for overriding that method.
+- If you want to implement, the base class logic in the child class and also add your own implementation, you can do base.method followed by your implementation
