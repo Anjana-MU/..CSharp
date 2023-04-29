@@ -9,7 +9,7 @@ namespace Learning_2023
     abstract class AbstractClassExamples
     {
         //can have abstract properties
-        public abstract int MyProperty();
+        public abstract int MyProperty { get; set; }
        
         //can have constructors
         public AbstractClassExamples()
@@ -28,16 +28,15 @@ namespace Learning_2023
 
     class Dervied1 : AbstractClassExamples
     {
+        public override int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         //Class that is dervied from abstract class need to implement all abstarct methods and properties
         public override void Method1()
         {
             throw new NotImplementedException();
         }
 
-        public override int MyProperty()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 
     abstract class Shape
