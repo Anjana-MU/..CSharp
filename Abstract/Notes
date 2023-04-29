@@ -1,0 +1,10 @@
+- Abstract class cannot be instantiated
+- Abstract classes are base classes
+- A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.
+- Abstract methods are implicitly virtual
+- The abstract modifier indicates the incomplete implementation.
+- Abstract classes can have both abstract and non-abstract methods
+- Abstract classes are used for implementation in derived classes
+- Interfaces are used to define the implementation
+- Only abstract classes can have abstract methods
+- Abstract methods do not have body, but only declaration
