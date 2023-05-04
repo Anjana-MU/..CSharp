@@ -5,21 +5,20 @@
 - Single inheritance: A derived class that inherits from only one base class.
 - Multi-level inheritance: A derived class that inherits from a base class and the derived class itself becomes the base class for another derived class.
 - Hierarchical inheritance: A base class that serves as a parent class for two or more derived classes.
-- Multiple inheritance: A derived class that inherits from two or more base classes.
+- Multiple inheritance: Not possible in c#. You can use interface to achieve this.
 - In the derived class you can call the base class constructor by using
 	: base( constructor params)
 - Virtual, abstract and override can be used for overriding
-- New Keyword(compile type polymorphism)
-	New keyword is used for the runtime polymorphism (method overriding), we can change the base class function with derived class function.
-	New keyword hides the base class implementation
-	You are doing method hiding with the new keyword
-	The base class method may or may not be virtual for this
-- Virtual Keyword
+New Keyword
+	- New keyword is used for the method hiding, we can change the base class function with derived class function.
+	- New keyword hides the base class implementation
+	- You are doing method hiding with the new keyword
+	- The base class method may or may not be virtual for this
+Virtual Keyword
 	Virtual keyword is used for generating a virtual path for its derived classes on implementing method overriding. The Virtual keyword is used within a set with an override keyword.
-	
-- Override Keyword
+Override Keyword
 	Override keyword is used in the derived class of the base class in order to override the base class method. The Override keyword is used with the virtual keyword
-	The override modifier extends the base class virtual method, and the new modifier hides an accessible base class method. 
-	You can convert a base class to a derived class but not the other way around.
-- Sealed keyword
-	Sealed classes cannot be derived and sealed methods cannot be overriden
+	- The override modifier extends the base class virtual method, and the new modifier hides an accessible base class method. 
+	- You can convert a base class to a derived class but not the other way around.
+Sealed keyword
+Sealed classes cannot be derived and sealed methods cannot be overriden
