@@ -88,9 +88,10 @@ namespace Learning_2023
             pg.Swim();
      */
 
-    //multiple inheritance : Dervied classes inherits from multiple base classes. Need interface to achieve this(has a relationship)
+    //multiple inheritance : Need interface to achieve this(has a relationship)
+    //A derived class cannot inherit from multiple base classes
 
-    interface SportStudent
+    interface ISportStudent
     {
         public void Studentname()
         {
@@ -98,7 +99,7 @@ namespace Learning_2023
         }
     }
 
-    class Student : Mammal , SportStudent
+    class Student : Mammal , ISportStudent
     {
         public void Studentname()
         {
