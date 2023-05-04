@@ -33,6 +33,8 @@ namespace Learning_2023
        Animal is eating
        Dog is barking
      */
+    // From the above output we see that we are able to access the Eat() method of the animal base class in our dog derived class
+
 
     //multi-level inheritance: dervied class inherits from base class and in turn that dervied class is a base class for another class
     class Mammal : Animals
@@ -42,6 +44,8 @@ namespace Learning_2023
             Console.WriteLine("Mammal is running");
         }
     }
+    //above the derived class mammal is inheriting from the base class animal
+    //below the class is derived from mammal hence making mammal a base class
 
     class Horse : Mammal
     {
@@ -52,10 +56,12 @@ namespace Learning_2023
     }
 
     /*  Horse horse = new Horse();
-        horse.Eat();
-        horse.Run();
-        horse.Gallop();
+        horse.Eat();  -- Animal is eating
+        horse.Run();  -- Mammal is running
+        horse.Gallop(); -- Horse gallops
      */
+
+    //In our horse class we can access the methods from both Mammal and Animal base classes
 
     //Hieriarchial inheritance: base class is inherited by multiple dervied classes
     class Bird
@@ -84,14 +90,14 @@ namespace Learning_2023
 
     /*
      *      Penguin pg = new Penguin();
-            pg.Fly();
-            pg.Swim();
+            pg.Fly(); -- Bird is flying.
+            pg.Swim(); -- Penguin is swimming.
      */
 
     //multiple inheritance : Need interface to achieve this(has a relationship)
-    //A derived class cannot inherit from multiple base classes
+    //Derived class cannot inherit from multiple base classes
 
-    interface ISportStudent
+    interface SportStudent
     {
         public void Studentname()
         {
@@ -99,7 +105,7 @@ namespace Learning_2023
         }
     }
 
-    class Student : Mammal , ISportStudent
+    class Student : Mammal , SportStudent
     {
         public void Studentname()
         {
@@ -109,8 +115,8 @@ namespace Learning_2023
 
     /*
      * Student std = new Student();
-        std.Studentname();
-         std.Run();
+        std.Studentname(); -- InterfaceStudent1
+         std.Run(); -- Mammal is running
 
      */
 }
