@@ -159,5 +159,43 @@ namespace Learning_2023
     //    //Here we are not implementating the abstract method, hence the error
     //    //'Pentagon' does not implement inherited abstract member 'Shapes.GetCoordinates()'	
     //}
+    
+    
+     class Quad : Shapes
+    {
+        //here we will cast a derived class to a base class and then call the DRAW method which is present in both base and derived class
+        //we are trying to understand which class method would be called in this case
+        public override void GetCoordinates()
+        {
+            Console.WriteLine("In Quad class");
+        }
+
+        public override void Draw()
+        {
+            Console.WriteLine("Virtual Draw method of DERIVED class");
+        }
+
+        public new int GetArea()
+        {
+            Console.WriteLine("Virtual GetArea method of DERIVED class");
+            return 100;
+        }
+
+        /*output:
+            Quad qd = new Quad();
+            //casting a derived class object to a base class object
+            var a = (Shapes)qd;
+            a.Draw();  //--Virtual Draw method of DERIVED class
+            a.GetArea(); //--Virtual GetArea method of BASE class
+
+            Console.WriteLine("#######");
+
+            Shapes sh = new Quad();
+            sh.Draw(); //--Virtual Draw method of DERIVED class
+            sh.GetArea(); //--Virtual GetArea method of BASE class
+        */
+        // As you can see above, even if you cast a derived class object to base class the override method always points to
+        //derived class whereas the new keyword hides the implementation of base class
+    }
 
 }
