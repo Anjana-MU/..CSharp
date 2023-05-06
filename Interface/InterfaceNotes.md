@@ -1,4 +1,5 @@
 Interfaces:
+- Interface is a contract that implements an 'has a relationship'
 - Interfaces can contain properties and methods, but not fields.
 - Like abstract classes, interfaces cannot be used to create objects
 - Interface methods do not have a body - the body is provided by the "implement" class
