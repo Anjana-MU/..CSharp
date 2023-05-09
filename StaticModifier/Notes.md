@@ -1,4 +1,3 @@
-- In classes, interfaces, and structs, you may add the static modifier to fields, methods, properties, operators, events, and constructors.
 - Use the static modifier to declare a static member, which belongs to the type itself rather than to a specific object.
 - Accessed with the name of the class 
 - Static member has only one copy of the member
@@ -8,7 +7,7 @@
 - In simpler words they are global values
 - Use static classes for utility classes(System.Math) where no further modification would be required.
 	
-	Static class:
+Static class:
 - A static class can only have static members
 - You cannot use 'this'  keyword to access static members
 - Cannot be instantiated
@@ -24,7 +23,7 @@ Static Constructor
 - When it is executing, then the user has no control.
 - It does not take access modifiers or any parameters.	
 
-	Static Method
+Static Method
 - Can access static and non-static variables
 - Static methods can be overloaded but cannot be overridden.
 
@@ -32,6 +31,14 @@ Static vs Instance
 - If object under the consideration can exists only once in entire application then it would come under "static"
 - If a method does not use any field variable inside it then it can be static method.
 - If your class has no state and is just a series of related methods that, when given an input, will give you an output then you have an excellent candidate for a static class. (state here refers to changed behaviour) 
+
+Contains:
+- In classes, interfaces, and structs, you may add the static modifier to fields, methods, properties, operators, events, and constructors.
+- Overload
+
+Cannot contain:
+- Local method variables
+- Override as classes are sealed
 
 Usage:
 Static class:
