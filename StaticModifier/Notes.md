@@ -39,6 +39,7 @@ Possible:
 Not possible:
 - Local method variables
 - Override as classes are sealed
+- Cannot be instantiated
 
 Usage:
 Static class:
