@@ -32,11 +32,11 @@ Static vs Instance
 - If a method does not use any field variable inside it then it can be static method.
 - If your class has no state and is just a series of related methods that, when given an input, will give you an output then you have an excellent candidate for a static class. (state here refers to changed behaviour) 
 
-Contains:
+Possible:
 - In classes, interfaces, and structs, you may add the static modifier to fields, methods, properties, operators, events, and constructors.
 - Overload
 
-Cannot contain:
+Not possible:
 - Local method variables
 - Override as classes are sealed
 
