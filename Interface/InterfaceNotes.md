@@ -1,17 +1,42 @@
-Interfaces:
-- Interface is a contract that implements an 'has a relationship'
-- Interfaces can contain properties and methods, but not fields.
-- Like abstract classes, interfaces cannot be used to create objects
+- Interface is used to achieve multiple inheritance
+- Interface define a "has a" relationship.
+- An interfaces defines a contract. Any class that implements an interface has to fulfil that contract. This means that the class must implement methods defined in the interface.
 - Interface methods do not have a body - the body is provided by the "implement" class
-- An interface cannot contain a constructor (as it cannot be used to create objects)
+- Beginning with C# 8.0, an interface may define default implementations for some or all of its members. A class or struct that implements the interface doesn't have to implement members that have default implementations.
+- To implement an interface member, the corresponding member of the implementing class must be public, non-static, and have the same name and signature as the interface member.
+- Like you can convert a derived class to a base class, you can also convert the classes that is implementing interfaces to that interface
+	
+Interface vs Class
+- Use interfaces when implementations of the same functionality will differ.
+- Use abstract/base classes when you need to share a common concrete implementation.
+	
+Defaults:
+- By default interfaces are public. 
+- Interface keyword is used followed by the name starting with the letter capital I (IEnumerable)
 
-Explicit Interface implementation
-- If a class is implementing two interfaces and both have same method name and signature, to call a different implementation depending on which interface is in use,
- you can implement an interface member explicitly. An explicit interface implementation is a class member that is only called through the specified interface. 
- Name the class member by prefixing it with the name of the interface and a period in the derived class.
+Possible:
+- Interfaces can contain properties and methods
+- Inherit from another interface
+- Static methods, which must have an implementation
+- Static fields and constructors
+- Abstract methods
+
+Not possible:
+- Interface cannot contain instance fields, instance constructors, auto-implemented properties
+- Cannot be instantiated		
+
+Usage:
+- Use interfaces when implementations of the same functionality will differ.
+- Provides abstraction behaviours
+
+Some In-built interfaces:
+- IEnumerable (and IEnumerable): for use with foreach and LINQ
+- IDisposable: for resources requiring cleanup, used with using
+- IQueryable: lets you execute requests against queriable data sources.
+- INotifyPropertyChange : For data binding to UI classes in WPF, winforms and silverlight
+- IComparable and IComparer: for generalized sorting
+- IEquatable and IEqualityComparer: for generalized equality
+- IList and ICollection: for mutable collections
+- IDictionary: for lookup collections
 
 
-Difference between Interface and Abstract class:
-	1. The default modifier for interface is public, for abstract it is private
-	2. Interface cannot have any other modifier other than public
-![image](https://user-images.githubusercontent.com/77484700/236635371-5315e6d5-ab5c-47be-9f97-7e52c7c6c97b.png)
