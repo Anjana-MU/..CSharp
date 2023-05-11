@@ -46,6 +46,8 @@ Static class:
 Used when the implementation is same across all objects. 
 **A static class can be used as a convenient container for sets of methods that just operate on input parameters and do not have to get or set 
 any internal instance fields.**
+Utility Classes
+Operator Overloading
 
 
 Static method:
