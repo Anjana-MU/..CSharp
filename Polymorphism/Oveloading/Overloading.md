@@ -25,3 +25,6 @@ Usage
 Why?
 - If we need to do the same kind of the operation in different ways i.e. for different inputs.
 
+EqualityOperator(==) and EqualsMethod
+- "==" is a comparison operator and Equals() method compares string
+- "==" compares the reference identity and Equals() method compares only content 
