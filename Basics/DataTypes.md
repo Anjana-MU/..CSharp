@@ -1,6 +1,12 @@
-1. Basics
-- The address of the reference type is stored on stack 
--	Int is a struct type 
+**Basics**
+- Signed(both positive and negative numbers are stored)
+- Unsigned(only positive numbers are stored) this allows you to store one extra BIT value, so the memory capacity increases
+	
+	DataTypes
+	- The address of the reference type is stored on stack
+	- Int is a struct type
+	- Var keyword can be used where you don't want to mention dataType
+
 
 Value types are: Char, Struct, Enum, Numeric types, Boolean types
 Reference types are: String, Lists, Class Objects, Arrays
