@@ -200,6 +200,11 @@ namespace Student
                 groupName = value;
             }
         }
+        
+        public List<Student> StudentDetails             //change added, refer output2 and 3
+        {
+            get { return this.studentDetails; }
+        }
 
         public StudentGroup(string groupName, List<Student> studentDetails = null) 
         {
@@ -248,14 +253,14 @@ namespace Student
 
         public static StudentGroup operator +(StudentGroup c1, List<Student> c2)
         {
-
+            IEnumerable <Student> c3 = c1.StudentDetails.Union(c2); //change added, refer output2 and 3
             return new StudentGroup("Drama",c2);
 
         }
 
         public static StudentGroup operator +(StudentGroup c1, StudentGroup c2)
         {
-
+            IEnumerable<Student> c3 = c1.StudentDetails.Union(c2.StudentDetails); //change added, refer output2 and 3
             return new StudentGroup("Debate");
 
         }
