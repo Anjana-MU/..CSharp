@@ -253,16 +253,21 @@ namespace Student
 
         public static StudentGroup operator +(StudentGroup c1, List<Student> c2)
         {
-            IEnumerable <Student> c3 = c1.StudentDetails.Union(c2); //change added, refer output2 and 3
-            return new StudentGroup("Drama",c2);
-
+            StudentGroup sameGroup = c1;
+            foreach (var stu in c2)
+            {
+                if (!sameGroup.StudentDetails.Contains(stu))
+                {
+                    sameGroup.Add(stu);
+                }
+            }  
+            return sameGroup;
         }
 
         public static StudentGroup operator +(StudentGroup c1, StudentGroup c2)
         {
-            IEnumerable<Student> c3 = c1.StudentDetails.Union(c2.StudentDetails); //change added, refer output2 and 3
-            return new StudentGroup("Debate");
-
+            IEnumerable<Student> c3 = c1.StudentDetails.Union(c2.StudentDetails);
+            return new StudentGroup("Debate", c3.ToList());
         }
 
     }
@@ -271,7 +276,10 @@ namespace Student
      
             List<Student> kids = new List<Student>();
             kids.AddRange(new List<Student>() { s1, s2, s3, s4, s5 });
-
+            
+            List<Student> kids_1 = new List<Student>();
+            kids_1.AddRange(new List<Student>() { s5, s1});
+            
             Console.WriteLine();
             StudentGroup sp1 = new StudentGroup("Sports");
             sp1.Add(s4);
@@ -293,67 +301,15 @@ namespace Student
             sp2.CompleteInfo();                                             //Total number of students : 5
                                                                             
 
-            Console.WriteLine();                                            //Group Name: Drama
+            Console.WriteLine();                                            //Group Name: Sports
             StudentGroup dr1 = sp2 + kids;                                  //// Total number of students : 5
             dr1.CompleteInfo();
 
             Console.WriteLine();                                            //Group Name: Debate
-            StudentGroup de1 = sp2 + sp1;                                   // Total number of students : 0
+            StudentGroup de1 = sp2 + sp1;                                   // Total number of students : 5
             de1.CompleteInfo();
      */
-     
-     /*output2
-     *  StudentGroup dr1 = sp2 + kids_1;                     //sp2 contains s1,s2,s3,s4
-        dr1.CompleteInfo();                                 //kids_1 contains s5, s1
-        foreach (var student in dr1.StudentDetails)         //operator overloading a studentgroup + student gives a new group with unique students from both groups
-        {
-            student.StudentInfo();
-        }
-     * 
-         Group Name: Drama
-         Total number of students : 5
-
-         Student info :
-         Name: Student1 | Sex : Male | Standard : 11 | Grade : A
-
-         Student info :
-         Name: Student2 | Sex : Female | Standard : 10 | Grade : B
-
-         Student info :
-         Name: Student3 | Sex : Male | Standard : 10 | Grade : F
-
-         Student info :
-         Name: Student4 | Sex : Female | Standard : 9 | Grade : B
-
-         Student info :
-         Name: Student5 | Sex : Male | Standard : 12 | Grade : C
-     */
-
-    /*output3
-            StudentGroup de1 = sp2 + sp1;                   //sp2 contains s1,s2,s3,s4
-            de1.CompleteInfo();                             //sp1 contains s1 and s4
-            foreach (var student in de1.StudentDetails)     //operator overloading a studentgroup + studentgroup gives a new group with unique students from both groups
-            {
-                student.StudentInfo();
-            }
-
-             Group Name: Debate
-             Total number of students : 4
-
-             Student info :
-             Name: Student1 | Sex : Male | Standard : 11 | Grade : A
-
-             Student info :
-             Name: Student2 | Sex : Female | Standard : 10 | Grade : B
-
-             Student info :
-             Name: Student3 | Sex : Male | Standard : 10 | Grade : F
-
-             Student info :
-             Name: Student4 | Sex : Female | Standard : 9 | Grade : B
-     */
-
-
+    
 }
 
 
