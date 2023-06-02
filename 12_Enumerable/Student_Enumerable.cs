@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Learning_2023.Enemurable
 {
+//SportsTeam implements IEnumerable which lets us to loop through the SportsTeam class and access the students there
     public enum Gender
     {
         Male,
@@ -57,12 +58,7 @@ namespace Learning_2023.Enemurable
     class SportsTeam : IEnumerable<Student>
     {
 
-        protected List<Student> studentDetails = new List<Student>();
-
-        public List<Student> StudentDetails
-        {
-            get { return this.studentDetails; }
-        }
+        protected List<Student> studentDetails = new List<Student>();       
 
         public SportsTeam(List<Student> studentDetails = null)
         {
