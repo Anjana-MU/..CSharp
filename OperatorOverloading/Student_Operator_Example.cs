@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -180,8 +181,8 @@ namespace Student
      * GetStudent list based on gender
      * GetStudentList based on standard
      * Possible to add student to list anytime
-     * New student  group object = StudentGroup + Student here you are returning new group
-     * New student  group object = StudentGroup + StudentGroup here you are retuning new group
+     * New student  group object = StudentGroup + Student returns the same group with added student
+     * New student  group object = StudentGroup + StudentGroup returns a new group with student from both groups and the name of the group as that of the first one
     */
 
     class StudentGroup
@@ -200,8 +201,8 @@ namespace Student
                 groupName = value;
             }
         }
-        
-        public List<Student> StudentDetails             //change added, refer output2 and 3
+
+        public List<Student> StudentDetails
         {
             get { return this.studentDetails; }
         }
@@ -223,6 +224,11 @@ namespace Student
         {            
             Console.WriteLine(" Group Name: " + GroupName);
             Console.WriteLine(" Total number of students : " + studentDetails.Count);
+            foreach (var item in studentDetails)
+            {
+                Console.WriteLine(" Name: " + item.Name + " | Sex : " + item.Sex + " | Standard : " + item.Standard + " | Grade : " + item.Grade);
+                
+            }
         }
 
         public void DetailsBasedonGender(Gender g)
@@ -251,6 +257,7 @@ namespace Student
             }
         }
 
+
         public static StudentGroup operator +(StudentGroup c1, List<Student> c2)
         {
             StudentGroup sameGroup = c1;
@@ -262,12 +269,14 @@ namespace Student
                 }
             }  
             return sameGroup;
+
         }
 
         public static StudentGroup operator +(StudentGroup c1, StudentGroup c2)
         {
             IEnumerable<Student> c3 = c1.StudentDetails.Union(c2.StudentDetails);
-            return new StudentGroup("Debate", c3.ToList());
+            return new StudentGroup(c1.groupName, c3.ToList());
+
         }
 
     }
@@ -275,43 +284,50 @@ namespace Student
     /*output
      
             List<Student> kids = new List<Student>();
-            kids.AddRange(new List<Student>() { s1, s2, s3, s4, s5 });
-            
+            kids.AddRange(new List<Student>() { s1, s2});
+
             List<Student> kids_1 = new List<Student>();
-            kids_1.AddRange(new List<Student>() { s5, s1});
-            
+            kids_1.AddRange(new List<Student>() { s3, s1, s4});
+
             Console.WriteLine();
             StudentGroup sp1 = new StudentGroup("Sports");
             sp1.Add(s4);
-            sp1.Add(s1);
+            sp1.Add(s5);
             sp1.DetailsBasedonGender(Gender.Male);       //Details of student with gender Male
-                                                        //Name: Student1 | Sex : Male | Standard : 11 | Grade : A
+                                                        // Name: Student5 | Sex : Male | Standard : 12 | Grade : C
 
             Console.WriteLine();
-            StudentGroup sp2 = new StudentGroup("Sports", kids);            // Details of student with gender Female
+            StudentGroup sp2 = new StudentGroup("Music", kids);            // Details of student with gender Female
             sp2.DetailsBasedonGender(Gender.Female);                        // Name: Student2 | Sex : Female | Standard : 10 | Grade : B
-            sp2.DetailsBasedonStandard(10);                                 //  Name: Student4 | Sex : Female | Standard : 9 | Grade : B
 
                                                                             // Details of student with standard 10
                                                                             //Name: Student2 | Sex : Female | Standard : 10 | Grade : B
-                                                                            // Name: Student3 | Sex : Male | Standard : 10 | Grade : F
 
 
-            Console.WriteLine();                                            //Group Name: Sports
-            sp2.CompleteInfo();                                             //Total number of students : 5
-                                                                            
+            
+            Console.WriteLine();
+            StudentGroup sp3 = new StudentGroup("Karate", kids_1);          // Group Name: Karate
+            sp3.CompleteInfo();                                             // Total number of students : 3
+                                                                            //Name: Student3 | Sex : Male | Standard : 10 | Grade : F
+                                                                            // Name: Student1 | Sex : Male | Standard : 11 | Grade : A
+                                                                            // Name: Student4 | Sex : Female | Standard : 9 | Grade : B
 
-            Console.WriteLine();                                            //Group Name: Sports
-            StudentGroup dr1 = sp2 + kids;                                  //// Total number of students : 5
-            dr1.CompleteInfo();
 
-            Console.WriteLine();                                            //Group Name: Debate
-            StudentGroup de1 = sp2 + sp1;                                   // Total number of students : 5
-            de1.CompleteInfo();
+
+            Console.WriteLine(); //sp2 has s1,s2 --- kids_1 has s3,s1,s4       //Group Name: Music
+            StudentGroup dr1 = sp2 + kids_1;                                  // Total number of students : 4
+            dr1.CompleteInfo();                                                //Name: Student1 | Sex : Male | Standard : 11 | Grade : A
+                                                                               // Name: Student2 | Sex : Female | Standard : 10 | Grade : B
+                                                                               // Name: Student3 | Sex : Male | Standard : 10 | Grade : F
+                                                                                //Name: Student4 | Sex : Female | Standard : 9 | Grade : B
+
+            Console.WriteLine(); //sp1 has s4,s5 --- sp3 has s3,s1,s4        //Group Name: Sports
+            StudentGroup de1 = sp1 + sp3;                                   // Total number of students : 4
+            de1.CompleteInfo();                                             // Name: Student4 | Sex : Female | Standard : 9 | Grade : B
+                                                                            //Name: Student5 | Sex : Male | Standard : 12 | Grade : C
+                                                                            //Name: Student3 | Sex : Male | Standard : 10 | Grade : F
+                                                                            // Name: Student1 | Sex : Male | Standard : 11 | Grade : A
      */
-    
-}
-
 
 
 }
