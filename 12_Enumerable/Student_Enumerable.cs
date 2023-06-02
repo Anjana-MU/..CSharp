@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Learning_2023.Enemurable
 {
-//SportsTeam implements IEnumerable which lets us to loop through the SportsTeam class and access the students there
+    //SportsTeam implements IEnumerable interface which lets us to loop through the SportsTeam class and access the students there
     public enum Gender
     {
         Male,
@@ -95,6 +95,21 @@ namespace Learning_2023.Enemurable
             {
                 item.StudentInfo();
             }
+            
+             Student info :
+             Name: Student1 | Sex : Male | Standard : 11
+
+             Student info :
+             Name: Student2 | Sex : Female | Standard : 10
+
+             Student info :
+             Name: Student3 | Sex : Male | Standard : 10
+
+             Student info :
+             Name: Student4 | Sex : Female | Standard : 9
+
+             Student info :
+             Name: Student5 | Sex : Male | Standard : 12
 
             //If sportsteam was not implementing IEnemurable then you would get the following error
             //foreach statement cannot operate on variables of type 'StudentGroup' because 
