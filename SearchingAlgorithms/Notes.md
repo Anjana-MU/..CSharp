@@ -56,3 +56,9 @@ Steps to perform Ternary Search:
 - If not, then we check whether the key is greater than the element at mid2. If yes, then recur to the third part.
 - If not, then we recur to the second (middle) part.
 
+
+Built-In Searching methods:
+- Collection.Find , collection.FindAll, collection.FindLast can be used to search for a particular element
+- Array.BinarySearch() can also be used. It has 8 different overloads
+
+
